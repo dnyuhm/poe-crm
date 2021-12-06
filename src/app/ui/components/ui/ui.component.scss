@@ -1,0 +1,22 @@
+@import "~src/stylings/layout";
+/// Description design of user interface
+.ui {
+  height: 100vh;
+}
+
+.contenu {
+  background: rgb(46, 47, 47);
+}
+
+.menu {
+  background: rgb(116, 116, 116);
+}
+
+nav {
+  width: 250px;
+}
+@media (min-width: $sm-breakpoint) {
+  aside {
+    position: inherit !important;
+  }
+}
