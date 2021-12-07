@@ -2,8 +2,17 @@
   <header>
     <ng-content select=".tr-header"></ng-content>
     <span (click)="toggle()">
-      <ng-content select=".tr-btn"></ng-content>
+      <ng-container *ngIf="close; then thenBlock else elseBlock"></ng-container>
     </span>
+
+    <ng-template #thenBlock>
+      <ng-content select=".tr-open"></ng-content>
+    </ng-template>
+
+    <ng-template #elseBlock>
+      <ng-content select=".tr-close"></ng-content>
+    </ng-template>
+
   </header>
   <main class="flex-grow-1 d-flex">
     <aside class="position-fixed menu">
