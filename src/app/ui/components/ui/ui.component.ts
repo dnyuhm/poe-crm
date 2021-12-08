@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ui.component.scss'],
 })
 export class UiComponent {
-  public close: boolean = true;
+  public close: boolean = false;
 
   constructor() {}
 
