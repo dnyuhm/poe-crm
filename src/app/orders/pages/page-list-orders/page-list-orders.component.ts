@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrdersService } from '../../services/orders.service';
 
 @Component({
   selector: 'app-page-list-orders',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-list-orders.component.scss'],
 })
 export class PageListOrdersComponent implements OnInit {
-  constructor() {}
+  constructor(private ordersService: OrdersService) {
+    this.ordersService.collection$.subscribe((data) => {
+      console.log(data);
+    });
+  }
 
   ngOnInit(): void {}
 }
